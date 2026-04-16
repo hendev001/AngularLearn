@@ -217,6 +217,21 @@ The inject() function simplifies the process of dependency injection (DI).
 It allows developers to access and inject services or dependencies directly within the component’s 
 constructor or lifecycle methods without the need for constructor injection.
 
+import { Component, inject } from '@angular/core';
+import { MyService } from './my-service.service';
+
+@Component({
+  selector: 'app-my-component',
+  template: `<p>My Component</p>`
+})
+export class MyComponent {
+  private myService = inject(MyService); // Injecting the service using inject()
+
+  constructor() {
+    this.myService.doSomething(); // Using the injected service
+  }
+}   
+
 44. What improvements have been made to standalone testing?
 
 Standalone components can now be tested directly, reducing boilerplate code and enhancing tree-shaking by 
@@ -253,12 +268,53 @@ Reusability: Enables the reuse of Angular components across different projects a
 Interoperability: Provides the integration of Angular components into non-Angular applications, enhancing flexibility and compatibility.
 Encapsulation: Provides encapsulated, self-contained components that encapsulate their logic, styles, and templates, reducing the risk of conflicts in larger applications.
 
+illustration of Angular Elements:
+
+// Angular Component
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-greeting',
+  template: `<h1>Hello, {{ name }}!</h1>`,
+  styles: `h1 { color: blue; }`
+})
+export class GreetingComponent {
+  @Input() name: string = 'World';
+}
+
+// Usage in a non-Angular application
+<app-greeting name="Alice"></app-greeting>      
 
 49. What is a Resolver in Angular?
 
 A Resolver in Angular is a service that pre-fetches data before a route is activated, ensuring that the necessary data is available when the route is accessed. 
 This is particularly useful for loading important data that a component depends on, thereby enhancing user experience by avoiding loading indicators or incomplete views.
 
+
+illustration of a Resolver: 
+
+
+
+// Resolver Service 
+import { Injectable } from '@angular/core';
+import { Resolve } from '@angular/router';
+import { DataService } from './data.service';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataResolver implements Resolve<any> {
+  constructor(private dataService: DataService) {}
+
+  resolve() {
+    return this.dataService.getData(); // Fetch data before route activation
+  }
+}
+
+// Route Configuration
+const routes = [
+  { path: 'data', component: DataComponent, resolve: { data: DataResolver } }
+];          
 
 
 

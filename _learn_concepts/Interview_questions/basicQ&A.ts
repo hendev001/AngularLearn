@@ -1,6 +1,7 @@
 /*
 Angular Interview Questions and Answers
-Angular is a popular open-source framework that simplifies web development by creating interactive single-page applications (SPAs). Unlike traditional websites that load new pages for each click, SPAs offer a smoother user experience by updating content on the same page.
+Angular is a popular open-source framework that simplifies web development by creating interactive single-page applications (SPAs).
+ Unlike traditional websites that load new pages for each click, SPAs offer a smoother user experience by updating content on the same page.
 
 Syncs model and view in real-time, minimizing DOM manipulation.
 Organizes code for scalability and maintainability in SPAs.
@@ -9,7 +10,8 @@ Angular Basics Interview Questions
 In this section, we will discuss basic Angular questions asked in the interview suitable for the freshers.
 
 1. Why was a client-side framework introduced?
-Client-side frameworks were introduced to handle the growing complexity of modern web applications. Earlier, with plain JavaScript or jQuery, developers had to manually update the DOM, which became messy and hard to maintain as applications grew.
+Client-side frameworks were introduced to handle the growing complexity of modern web applications. 
+Earlier, with plain JavaScript or jQuery, developers had to manually update the DOM, which became messy and hard to maintain as applications grew.
 Frameworks like Angular and React solved this by:
 Supporting Single Page Applications (SPAs) for smooth, fast user experiences without full page reloads.
 Providing features like two-way data binding (Angular) or virtual DOM (React) to keep UI and data in sync automatically.
@@ -44,12 +46,14 @@ Supports data binding with templates.	No built-in data binding support.
 
 
 4. What are Single Page Applications (SPA)?
-Single Page Applications (SPAs) are web applications that load a single HTML page once and dynamically update the content using JavaScript. This approach enables faster interactions and a smoother, more consistent user experience.
+Single Page Applications (SPAs) are web applications that load a single HTML page once and dynamically update the content using JavaScript. 
+This approach enables faster interactions and a smoother, more consistent user experience.
 Dynamically updates content without reloading the entire page.
 Provides faster performance and a seamless user experience.
 
 5. What are templates in Angular?
-A template is a kind of HTML that instructs Angular about how to display a component. An Angular HTML template, like conventional HTML, produces a view, or user interface, in the browser, but with far more capabilities. Angular API evaluates an HTML template of a component, creates HTML, and renders it.
+A template is a kind of HTML that instructs Angular about how to display a component. An Angular HTML template, like conventional HTML, produces a view, 
+or user interface, in the browser, but with far more capabilities. Angular API evaluates an HTML template of a component, creates HTML, and renders it.
 There are two ways to create a template in an Angular component:
 Inline Template
 Linked Template
@@ -58,7 +62,8 @@ Linked Template: A component may include an HTML template in a separate HTML fil
 
 
 6. What is an AOT Compiler?
-The AOT (Ahead-of-Time) Compiler in Angular compiles Angular HTML and TypeScript code into efficient JavaScript before the browser downloads and runs the app. This makes the application load faster, reduces runtime errors, and improves overall performance compared to JIT (Just-in-Time) compilation, which happens in the browser.
+The AOT (Ahead-of-Time) Compiler in Angular compiles Angular HTML and TypeScript code into efficient JavaScript before the browser downloads and runs the app. 
+This makes the application load faster, reduces runtime errors, and improves overall performance compared to JIT (Just-in-Time) compilation, which happens in the browser.
 
 7. How many types of compilation Angular provides?
 Angular provides two types of compilation:

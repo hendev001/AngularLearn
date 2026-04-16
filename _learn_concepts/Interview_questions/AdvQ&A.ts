@@ -120,6 +120,30 @@ In Angular, the PipeTransform interface is used to define the structure of a cus
 which helps in creating custom pipes to transform data within templates.
 
 
+illustration of PipeTransform Interface:
+
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({ name: 'exponentialStrength' })
+export class ExponentialStrengthPipe implements PipeTransform {
+  transform(value: number, exponent: number = 1): number {
+    return Math.pow(value, exponent);
+  }
+}
+
+67. What is the purpose of Angular's HttpClient?
+
+The purpose of Angular's HttpClient is to provide a simplified and efficient way to make HTTP requests to backend services. 
+It allows developers to communicate with RESTful APIs, handle responses, and manage errors in a consistent manner, 
+making it easier to integrate external data sources into Angular applications.
+
+68. What are Angular Resolvers?
+
+Angular Resolvers are services that pre-fetch data before a route is activated. 
+They are used to ensure that necessary data is available for a component before it is displayed,
+ improving user experience by avoiding loading indicators or incomplete views.
+
+
 
 
 
