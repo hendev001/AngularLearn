@@ -45,6 +45,7 @@ const routes: Routes = [
 ];
 By using the loadChildren property, Angular will load the FeatureModule only when the user navigates to the /feature route.
 This improves the app's performance by deferring the loading of non-essential modules.
+
 69. Scenario: Handling Form Validation in Reactive Forms
 
 Question: We have a form where the user enters their email, and we need to ensure that it is both valid and unique (not already in use). 
